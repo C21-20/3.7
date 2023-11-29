@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Видалення елементів з класом list-item</title>
+    <style>
+        /* Стилі залишаємо без змін */
+    </style>
+</head>
+<body>
+    <div class="list-item">Елемент 1</div>
+    <div class="list-item">Елемент 2</div>
+    <div class="list-item">Елемент 3</div>
+    <button id="removeItemsButton">Видалити елементи</button>
+
+    <script>
+        const removeItemsButton = document.getElementById('removeItemsButton');
+
+        removeItemsButton.addEventListener('click', function() {
+            const listItems = document.querySelectorAll('.list-item');
+
+            listItems.forEach(item => {
+                item.remove(); // Видаляємо кожен елемент з класом list-item
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Зміна тексту останнього елемента</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #6acedc; /* Додано колір фону */
+  }
+
+  #task1 {
+    border: 1px solid #000000;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(13, 123, 151); /* Додано колір фону блоку */
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var task1Element = document.getElementById("task1");
+    var paragraphs = task1Element.getElementsByTagName("p");
+    var lastParagraph = paragraphs[paragraphs.length - 1];
+    lastParagraph.textContent = "новий останній текст";
+  });
+</script>
+</head>
+<body>
+
+<div id="task1">
+  <p>Перший параграф</p>
+  <p>Другий параграф</p>
+  <p>Третій параграф</p>
+</div>
+
+</body>
+</html>

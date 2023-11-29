@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Зміна стилів для класів за допомогою JavaScript</title>
+    <style>
+        /* Стилі для тексту */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .highlight, .list-item {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="highlight">Червоний колір</div>
+    <div class="list-item">Сірий фон</div>
+    <div class="highlight list-item">Червоний колір та сірий фон</div>
+    <div>11111111111111111111111</div>
+
+    <script>
+        // Отримуємо всі елементи з класом highlight
+        const highlightElements = document.querySelectorAll('.highlight');
+
+        // Змінюємо колір тексту для кожного елемента з класом highlight
+        highlightElements.forEach(element => {
+            element.style.color = 'red';
+        });
+
+        // Отримуємо всі елементи з класом list-item
+        const listItemElements = document.querySelectorAll('.list-item');
+
+        // Змінюємо фон для кожного елемента з класом list-item
+        listItemElements.forEach(element => {
+            element.style.backgroundColor = 'lightgrey';
+        });
+    </script>
+</body>
+</html>

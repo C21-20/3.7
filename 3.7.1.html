@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Зміна тексту та додавання класів</title>
+    <style>
+        /* Стилі залишаємо без змін */
+        .highlight {
+            background-color: yellow;
+        }
+
+        .list-item {
+            border: 1px solid #000;
+            padding: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <p>Перший параграф</p>
+    <p>Другий параграф</p>
+    <p>Третій параграф</p>
+    <p id="task1">Елемент з ідентифікатором task1</p>
+    <ul>
+        <li>Пункт списку 1</li>
+        <li>Пункт списку 2</li>
+        <li>Пункт списку 3</li>
+    </ul>
+
+    <script>
+        // Змінюємо текст всіх елементів <p>
+        const paragraphs = document.querySelectorAll('p');
+        paragraphs.forEach(paragraph => {
+            paragraph.textContent = 'змінений текст';
+        });
+
+        // Додаємо клас highlight елементу з ідентифікатором task1
+        const task1Element = document.getElementById('task1');
+        task1Element.classList.add('highlight');
+
+        // Додаємо клас list-item всім елементам <li>
+        const listItems = document.querySelectorAll('li');
+        listItems.forEach(listItem => {
+            listItem.classList.add('list-item');
+        });
+    </script>
+</body>
+</html>
